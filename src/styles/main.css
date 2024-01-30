@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--c-primary);
+    max-height: 80px;
+    padding: 0 24px;
+    color: var(--c-white);
+}
+
+.header ul a{
+    color: var(--c-white);
+}
+
+.home-page{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 24px;
+    max-height: calc(100vh - 96px);
+    height: calc(100vh - 96px);
+}
+
+.filter-holder{
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+
+.all-countries-holder{
+    flex: 0 0 85%;
+    max-width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 12px;
+    max-height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.country-box{
+    flex: 0 0 calc(16.66666% - 24px);
+    max-width: calc(16.66666% - 24px);
+    padding: 12px;
+    border: 1px solid var(--c-primary-b);
+    border-radius: 8px;
+    margin: 12px;
+}
+
+.country-box > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.country-box h3{
+    text-align: center;
+    color: var(--c-primary-b);
+}
+
+.country-box img{
+    margin-top: auto;
+    height: 50%;
+}
+
+.country-box:hover{
+    border: 2px solid var(--c-emphasis);
+}
+
+.country-box:hover h3{
+    color: var(--c-emphasis);
+}
+
+.filter-holder{
+    margin: 48px 0 24px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group input,
+.form-group select{
+    max-width: 120px;
+    min-width: 120px;
+    height: 32px;
+    margin: 8px 0;
+    text-indent: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--c-black);
+}
+
+.buttons-holder button{
+    padding: 6px 12px;
+    background-color: transparent;
+    border-radius: 8px;
+    margin: 16px 8px 0;
+    min-width: 96px;
+    border: 2px solid var(--c-primary-b);
+    color: var(--c-primary-b);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.buttons-holder button:first-child{
+    margin-left: 0;
+    border: 2px solid var(--c-black);
+    color: unset;
+}
+
+.buttons-holder button:hover{
+    color: var(--c-emphasis);
+    border-color: var(--c-emphasis);
+}
